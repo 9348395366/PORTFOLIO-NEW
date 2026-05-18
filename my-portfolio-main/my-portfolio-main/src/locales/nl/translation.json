@@ -1,0 +1,102 @@
+{
+  "nav": {
+    "socials": "Socials",
+    "resume": "CV",
+    "projects": "Projecten",
+    "about": "Over mij",
+    "skills": "Vaardigheden"
+  },
+  "about": {
+    "title": "Over mij",
+    "greeting": "Hallo, ik ben <1>Chandan Kumar Nanda</1> 👋",
+    "bio_p1": "Ik ben een <1>Belgische studente software engineering</1>. Wat begon als wat Python programmeren uit interesse, groeide al snel uit tot een serieuze passie. Voor de fun LeetCode-problemen oplossen bracht me uiteindelijk bij mijn graduaat aan Howest, waar ik <3>met grote onderscheiding</3> afstudeerde.",
+    "bio_p2": "Momenteel volg ik een Bachelor Toegepaste Informatica met specialisatie software engineering. Ik combineer schoolprojecten met eigen projecten, zoals het bouwen van deze website. Buiten het coderen leer ik <1>Japans (JLPT N4)</1>, ga ik graag wandelen in de Belgische natuur en neem ik foto’s.",
+    "bio_p3": "Ik werk toe naar een <1>stage in Tokio in 2027</1> en plan om na mijn afstuderen naar Chiba te verhuizen. Ik hou ervan om technische nauwkeurigheid te combineren met creativiteit, of dat nu in code is of achter de camera."
+  },
+  "projects": "Projecten",
+  "classified": "GECLASSIFICEERD",
+  "project_items": {
+    "p1": {
+      "desc": "Real-time wether updates and feature weather update using AI.",
+      "context": "SOLO PROJECT"
+    },
+    "p2": {
+      "desc": "Mobiele app voor het beheren van community-activiteiten.",
+      "context": "GROEPSPROJECT"
+    },
+    "p3": {
+      "title": "Zoekinfrastructuur",
+      "desc": "Intern project voor het optimaliseren van grootschalige dataverwerking.",
+      "context": "STAGE"
+    }
+  },
+  "skills": "Vaardigheden",
+  "skills_categories": {
+    "languages": "Programmeertalen",
+    "backend": "Backend-ontwikkeling",
+    "frontend": "Frontend-ontwikkeling",
+    "mobile_desktop": "Mobiele & desktopontwikkeling",
+    "devops": "DevOps & infrastructuur",
+    "tooling": "Tools & versiebeheer"
+  },
+  "contact": "Neem contact op",
+  "socials": {
+    "subtitle": "Een nieuwe horizon wacht.",
+    "linkedin_handle": "Laten we connecteren",
+    "github_handle": "Bekijk projecten",
+    "email_handle": "Stuur een bericht",
+    "return_cosmos": "Terug naar de Cosmos"
+  },
+  "resume": "CV",
+  "drag_hint": "Sleep om het universum te draaien",
+  "resume_content": {
+    "cover": {
+      "subtitle": "Software Engineering",
+      "edition": "Editie 2026 // Portfolio",
+      "built_with": "Gebouwd met React"
+    },
+    "p1": {
+      "title": "Professioneel Profiel",
+      "text": "Software-engineeringstudente met een sterke focus op backend development binnen het .NET-ecosysteem. Ik combineer een praktijkgerichte achtergrond in C# met een bacheloropleiding waarin ik me verdiep in software-architectuur en theoretische fundamenten. Ik deed hands-on ervaring op met het bouwen van complexe zoeksystemen met OpenSearch."
+    },
+    "p2": {
+      "title": "Graduaat",
+      "program": "Programmeren (Graduaat)",
+      "school": "Howest",
+      "distinction": "Afgestudeerd met grote onderscheiding",
+      "list_dev": "<1>Ontwikkeling:</1> C# & .NET, HTML5, CSS3, JavaScript",
+      "list_infra": "<1>Infrastructuur:</1> MS SQL / T-SQL, Docker",
+      "list_method": "<1>Methodologie:</1> Agile/Scrum, Git, GitHub"
+    },
+    "p3": {
+      "title": "Bacheloropleiding",
+      "program": "Toegepaste Informatica",
+      "specialization": "Afstudeerrichting Software Engineering",
+      "track_info": "<1>Verkort traject:</1> Instroom in jaar 2 op basis van mijn behaalde graduaat.",
+      "list_arch": "<1>Architectuur:</1> DDD, Design Patterns & Enterprise-systemen",
+      "list_eng": "<1>Engineering:</1> Datastructuren, algoritmes & QA",
+      "list_cloud": "<1>Cloud & .NET:</1> Geavanceerde ecosystemen & cloud-native deployment"
+    },
+    "p4": {
+      "title": "Ervaring",
+      "context": "STAGE • 2025",
+      "role": "Zoekgestuurd Data-ophaalsysteem",
+      "bullet_1": "Sub-seconde responstijden gerealiseerd met <0>OpenSearch</0>.",
+      "bullet_2": "Services gecontaineriseerd met <0>Docker</0> voor productie."
+    },
+    "p5": {
+      "title": "Goals?",
+      "target_title": "Hoofddoel: Japan (2027)",
+      "target_text": "Mijn doel is een software engineering-stage in de regio Tokio/Osaka zien te vinden.",
+      "readiness_title": "Waar ik nu aan werk",
+      "list_jp": "<1>Japans:</1> Actief bezig met JLPT N4.",
+      "list_tech": "<1>Technisch:</1> Mijn full-stack kennis verder uitbouwen en werken aan persoonlijke projecten."
+    },
+    "p6": {
+      "title": "Bedankt voor je tijd",
+      "text": "Ben je op zoek naar een gedreven developer met <0>.NET-expertise</0> en <1>internationale projectervaring</1>, dan hoor ik graag van je.",
+      "btn_pdf": "PDF-versie bekijken",
+      "scroll_hint": "Ontdek mijn socials hieronder"
+    }
+  }
+}

@@ -1,0 +1,250 @@
+$mobile-breakpoint: 600px;
+
+.landing-page {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; 
+  
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  z-index: 1000;
+
+  @keyframes entranceFade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: all 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(74, 0, 128, 0.1) 50%,
+        rgba(0, 0, 0, 0.3) 100%);
+    z-index: 2;
+    opacity: 0;
+    animation: entranceFade 1s ease-out 0.5s forwards;
+  }
+
+  .message-container {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%; 
+    color: white;
+    letter-spacing: 2px;
+    opacity: 0;
+    animation: entranceFade 1.5s ease-out 0.2s forwards;
+    transition: all 0.5s ease;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0 15px; 
+      font-size: clamp(1.5rem, 6vw, 2.2rem); 
+    }
+
+    .typewriter-text {
+      background: linear-gradient(45deg, #ffffff, #a8c0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 20px rgba(168, 192, 255, 0.4)) drop-shadow(0 0 2px rgba(0, 0, 0, 0.5));
+      display: inline-block;
+      line-height: 1.2;
+    }
+  }
+
+  .particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none; 
+    animation: entranceFade 4s ease-out 1s forwards;
+  }
+
+  .particle {
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    width: var(--size);
+    height: var(--size);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: float 3s ease-in-out var(--delay) infinite;
+    will-change: transform; 
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle,
+          rgba(255, 255, 255, 0.8) 0%,
+          transparent 70%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &.page-exit {
+    .background-video {
+      transform: scale(1.1);
+      filter: brightness(0.7) blur(3px);
+      transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1);
+      opacity: 0.8;
+    }
+
+    .message-container {
+      animation: messageExit 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .particle {
+      animation: particleExit 1s ease-out forwards;
+    }
+
+    .skip-intro-button {
+      animation: buttonExit 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+  }
+
+  .transition-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #0a0a2a 0%, #1a1a4a 50%, #0a0a2a 100%);
+    z-index: 4;
+    animation: overlayReveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .skip-intro-button {
+    position: fixed;
+    top: max(25px, env(safe-area-inset-top) + 15px);
+    right: max(25px, env(safe-area-inset-right) + 15px);
+    bottom: auto; 
+    left: auto;   
+    background: rgba(10, 10, 42, 0.4);
+    background-color: rgba(255,255,255,0.15);
+    border: 1px solid rgba(168, 192, 255, 0.3);
+    color: rgba(224, 224, 255, 0.8);
+    font-size: clamp(12px, 2.5vw, 16px);
+    padding: 0.8em 1.6em;
+    border-radius: 50px; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.5px; 
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);   
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+    pointer-events: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: -1px; right: -1px; bottom: -1px;
+      background: linear-gradient(45deg, #a8c0ff, #e0e0ff, #a8c0ff);
+      border-radius: 50px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    &:hover, &:active {
+      background: rgba(26, 26, 74, 0.8);
+      color: #ffffff;
+      box-shadow: 0 8px 25px rgba(168, 192, 255, 0.15), 0 0 0 1px rgba(168, 192, 255, 0.2);
+      &::before { opacity: 1; }
+    }
+
+    &.is-visible {
+      pointer-events: auto;
+      animation: buttonEntrance 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    &.is-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-10px) scale(0.95);
+    }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-20px) scale(1.1); opacity: 1; }
+  }
+
+  @keyframes messageExit {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-60px) scale(1.1); opacity: 0; }
+  }
+
+  @keyframes particleExit {
+    0% { transform: translateY(0) scale(1); opacity: 0.7; }
+    100% { transform: translateY(-100px) scale(0.5); opacity: 0; }
+  }
+
+  @keyframes overlayReveal {
+    0% { opacity: 0; clip-path: circle(0% at 50% 50%); }
+    100% { opacity: 1; clip-path: circle(100% at 50% 50%); }
+  }
+
+  @keyframes buttonEntrance {
+    0% { opacity: 0; transform: translateY(-10px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  @keyframes buttonExit {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-20px) scale(0.9); }
+  }
+}
+
+.page-transition {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #0a0a2a 0%, #1a1a4a 100%);
+  z-index: 999;
+  animation: pageFade 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pageFade {
+  0% { opacity: 1; }
+  100% { opacity: 0; visibility: hidden; }
+}
