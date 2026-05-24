@@ -2,6 +2,8 @@
 
 Welcome to the repository for my interactive portfolio! This website showcases my skills, projects, and experience in an engaging and modern way.
 
+click this link----  portfolio-new-liart-tau.vercel.app
+
 ## About the Portfolio
 
 This portfolio is a React single-page application exploring time-based animation, particle systems, procedural rendering, and real-time 3D graphics in the browser. It combines React state and Framer Motion for eased, state-driven transitions; memoized pseudo-random particle fields animated through parametric keyframes; custom canvas effects including Perlin noise-driven nebula rendering, light orbs, and lightweight motion physics; and WebGL scenes built with React Three Fiber and Drei for clouds, stars, lighting, and fog. Styling is handled with responsive SCSS layering, while i18next powers runtime language switching across English, Dutch, French, and Japanese.
@@ -23,7 +25,7 @@ Regardless of which name you come across, it's always **me** behind the work! �
 
 ## 🔗 Live Demo
 
-Check out my portfolio live at:
+Check out my portfolio live at: portfolio-new-liart-tau.vercel.app
 
 ## 🛠️ Setup & Installation
 
