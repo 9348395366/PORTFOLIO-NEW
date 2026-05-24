@@ -13,6 +13,7 @@ import {
   SkipBack,
   X,
 } from "lucide-react";
+import { FaReact } from "react-icons/fa";
 import "../../styles/sections/ProjectsSection.scss";
 import aiWeatherCoverImg from "../../assets/images/AIWeatherCover.png";
 import flutterImg from "../../assets/images/VrijeTeid.png";
@@ -36,8 +37,8 @@ const ProjectsSection = ({ id }) => {
     },
     {
       id: 2,
-      title: "Vrije Teid!", 
-      subtitle: "Flutter • Dart • Firebase",
+      title: "NALCO-PLANTPLUS",
+      subtitle: "React • TypeScript • Java Script • Vercel",
       description: t('project_items.p2.desc'), 
       videoUrl: "",
       image: flutterImg,
@@ -306,6 +307,12 @@ const ProjectsSection = ({ id }) => {
                         className="tech-tag"
                         style={{ color: project.color }}
                       >
+                        {tech.toLowerCase() === "react" && (
+                          <FaReact
+                            size={12}
+                            style={{ marginRight: 4, verticalAlign: "text-bottom" }}
+                          />
+                        )}
                         {tech}
                       </span>
                     ))}
