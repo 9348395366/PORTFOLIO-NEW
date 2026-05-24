@@ -1,0 +1,12 @@
+{
+  "framework": "create-react-app",
+  "installCommand": "npm --prefix my-portfolio-main/my-portfolio-main install --legacy-peer-deps",
+  "buildCommand": "npm --prefix my-portfolio-main/my-portfolio-main run build",
+  "outputDirectory": "my-portfolio-main/my-portfolio-main/build",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
