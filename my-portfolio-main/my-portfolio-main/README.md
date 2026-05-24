@@ -23,14 +23,14 @@ Regardless of which name you come across, it's always **me** behind the work! �
 
 ## 🔗 Live Demo
 
-Check out my portfolio live at: [victoriaghoos.com](https://victoriaghoos.com/)
+Check out my portfolio live at:
 
 ## 🛠️ Setup & Installation
 
 To run this project locally:
 
 ```bash
-git clone https://github.com/victoriaghoos/my-portfolio.git
+git clone 
 cd my-portfolio
 npm install
 npm start
